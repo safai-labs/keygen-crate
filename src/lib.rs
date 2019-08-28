@@ -18,6 +18,8 @@ fn get_key_byte(seed: &i64, a: i16, b: i16, c: i16) -> String {
     let b_shift = b % 3;
     let mut result;
 
+
+
     if a_shift % 2 == 0 {
         result = ((seed >> a_shift) & 0x000000FF) ^ ((seed >> b_shift) | c as i64);
     } else {
@@ -48,8 +50,6 @@ fn get_checksum(s: &str) -> String {
     }
 
     let sum = (left << 8) + right;
-
-    // format as upperhex with leading 0s, must be 4 chars long
     format!("{:01$X}", sum, 4)
 }
 

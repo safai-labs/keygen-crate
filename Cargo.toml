@@ -9,5 +9,5 @@ license = "MIT"
 description = "Create a verifiable serial key from a seed"
 
 [dependencies]
-rand = "0.3"
-regex = "0.2"
+rand = "0.7.0"
+regex = "1.2.1"
